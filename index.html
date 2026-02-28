@@ -20,7 +20,7 @@
     <meta property="og:description"
         content="Georgia Tech EE student, NavAbility founder, TEDx speaker & patent holder. 30+ awards totaling $190K+ for pioneering assistive technologies for the visually and hearing impaired.">
     <meta property="og:url" content="https://justinpeng.ca">
-    <meta property="og:image" content="https://justinpeng.ca/profilephoto.png">
+    <meta property="og:image" content="https://justinpeng.ca/profilephoto.webp">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Justin Peng – Electrical Engineer and Founder of NavAbility Technologies">
@@ -30,7 +30,7 @@
     <meta name="twitter:title" content="Justin Peng – Electrical Engineer, Founder & Assistive Tech Innovator">
     <meta name="twitter:description"
         content="Georgia Tech EE student, NavAbility founder, TEDx speaker & patent holder. 30+ awards totaling $190K+ for pioneering assistive technologies for the visually and hearing impaired.">
-    <meta name="twitter:image" content="https://justinpeng.ca/profilephoto.png">
+    <meta name="twitter:image" content="https://justinpeng.ca/profilephoto.webp">
     <meta name="twitter:image:alt" content="Justin Peng – Electrical Engineer and Founder of NavAbility Technologies">
 
     <!-- Canonical & Robots -->
@@ -49,7 +49,7 @@
       "jobTitle": "Electrical Engineer & Founder",
       "description": "Georgia Tech EE student, NavAbility founder, TEDx speaker & patent holder. Pioneering assistive technologies for the visually and hearing impaired.",
       "url": "https://justinpeng.ca",
-      "image": "https://justinpeng.ca/profilephoto.png",
+      "image": "https://justinpeng.ca/profilephoto.webp",
       "email": "jpeng319@gatech.edu",
       "telephone": "+1-770-362-5723",
       "address": {
@@ -97,6 +97,7 @@
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="favicon-96x96.png" type="image/png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" as="image" href="profilephoto.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Optimized Font Loading to prevent render blocking -->
@@ -478,9 +479,12 @@
     <div class="app-layout">
         <aside class="sidebar">
             <header>
-                <img src="profilephoto.png"
-                    alt="Justin Peng – Electrical Engineer and Founder of NavAbility Technologies" class="profile-photo"
-                    width="160" height="160">
+                <picture>
+                    <source srcset="profilephoto.webp" type="image/webp">
+                    <img src="profilephoto.png"
+                        alt="Justin Peng – Electrical Engineer and Founder of NavAbility Technologies"
+                        class="profile-photo" width="160" height="160" fetchpriority="high">
+                </picture>
                 <h1>Justin Peng</h1>
             </header>
 
@@ -609,6 +613,9 @@
                     <ul>
                         <li>#2 overall out of 1000+ competitors at the world's most prestigious and largest collegiate
                             hackathon.</li>
+                        <li>Built an agentic AI surgical robotics platform enabling multi-arm autonomous control via
+                            custom inverse kinematics, RealSense-based 3D mapping, multi-model vision (SAM, YOLO, Gemini
+                            Robotics ER 1.5), and formally verified safety-constrained trajectories in Lean.</li>
                     </ul>
                 </div>
 
